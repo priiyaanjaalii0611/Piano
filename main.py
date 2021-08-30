@@ -2,15 +2,14 @@ import numpy as np
 import time
 import cv2
 from cvzone.HandTrackingModule import HandDetector
-from playsound import playsound
+import pyglet
 from threading import Thread
 
 cap =cv2.VideoCapture(0)
 cap.set(3,1280)
 cap.set(4,720)
 
-key_threshold = 1200
-k=True
+window = pyglet.window.Window()
 detector =HandDetector(detectionCon=0.8)
 
 keys=[["C","D",'E',"F","G","A","B","C","D","E","F","G","A","B"],["C#","D#","F#","G#","A#","C#","D#","F#","G#","A#"]]
@@ -30,32 +29,39 @@ for i in range(len(keys)):
             buttonList.append(Button([(40+j)*j+25,80],key,[35,50],(0,0,0)))    
 
 def playkeys(button):
-    if k:
-        if button.text=="A":
+    if button.text=="A":
             
-            Thread(target=playsound("A.wav")).start()
+        effectA=pyglet.resource.media("A.wav",streaming=False)
+        effectA.play()
                 
                 
-        if button.text=="B":
+    elif button.text=="B":
             
-            Thread(target=playsound("B.wav")).start()
+        effectB=pyglet.resource.media("B.wav",streaming=False)
+        effectB.play()
                 
-        if button.text=="C":
+    elif button.text=="C":
             
-            Thread(target=playsound("C.wav")).start()
-        if button.text=="D":
+        effectC=pyglet.resource.media("C.wav",streaming=False)
+        effectC.play()
+    elif button.text=="D":
             
-            Thread(target=playsound("D.wav")).start()
-        if button.text=="E":
+        effectD=pyglet.resource.media("A.wav",streaming=False)
+        effectD.play()
+    elif button.text=="E":
             
-            Thread(target=playsound("E.wav")).start()
+        effectE=pyglet.resource.media("A.wav",streaming=False)
+        effectE.play()
+        
 
-        if button.text=="F":
+    elif button.text=="F":
             
-            Thread(target=playsound("F.wav")).start()
-        if button.text=="G":
+        effectF=pyglet.resource.media("A.wav",streaming=False)
+        effectF.play()
+    elif button.text=="G":
             
-            Thread(target=playsound("G.wav")).start()                   
+        effectG=pyglet.resource.media("A.wav",streaming=False)
+        effectG.play()                  
 
 
 def drawAll(img,buttonList):
@@ -85,7 +91,7 @@ while True:
                  if x<lmlist[f][0]<x+w and y<lmlist[f][1]<y+h:
                      l,_,_=detector.findDistance(f,f-3,img,draw=False)
                      if l<120:
-                         cv2.rectangle(img,button.pos,(x+w,y+h),(80,9,78),cv2.FILLED)
+                         #cv2.rectangle(img,button.pos,(x+w,y+h),(80,9,78),cv2.FILLED)
                          playkeys(button)
 
                          
@@ -99,5 +105,7 @@ while True:
 
     cv2.imshow("IMAGE",img)
     cv2.waitKey(1)
+   
+
 
 

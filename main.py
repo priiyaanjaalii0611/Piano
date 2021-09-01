@@ -46,21 +46,21 @@ def playkeys(button):
         effectC.play()
     elif button.text=="D":
             
-        effectD=pyglet.resource.media("A.wav",streaming=False)
+        effectD=pyglet.resource.media("D.wav",streaming=False)
         effectD.play()
     elif button.text=="E":
             
-        effectE=pyglet.resource.media("A.wav",streaming=False)
+        effectE=pyglet.resource.media("E.wav",streaming=False)
         effectE.play()
         
 
     elif button.text=="F":
             
-        effectF=pyglet.resource.media("A.wav",streaming=False)
+        effectF=pyglet.resource.media("F.wav",streaming=False)
         effectF.play()
     elif button.text=="G":
             
-        effectG=pyglet.resource.media("A.wav",streaming=False)
+        effectG=pyglet.resource.media("G.wav",streaming=False)
         effectG.play()                  
 
 

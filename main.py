@@ -3,7 +3,7 @@ import time
 import cv2
 from cvzone.HandTrackingModule import HandDetector
 import pyglet
-from threading import Thread
+
 
 cap =cv2.VideoCapture(0)
 cap.set(3,1280)

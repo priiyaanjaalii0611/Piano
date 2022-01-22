@@ -15,9 +15,9 @@ _I know nothing about piano but i would love to learn about it if anyone knows a
 
 https://user-images.githubusercontent.com/64598746/150634365-5c0adb60-30d3-4256-bd63-34d6840fa832.mp4
 
-
+<br>
   
-### I gave given a detailed explaination in this [towards data science article](https://towardsdatascience.com/instruments-in-the-air-using-python-and-mediapipe-e2576819ef8a)
+### _I have given a detailed explaination in this [towards data science article](https://towardsdatascience.com/instruments-in-the-air-using-python-and-mediapipe-e2576819ef8a)_
 
 
 

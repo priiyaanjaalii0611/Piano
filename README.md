@@ -1,8 +1,8 @@
-# VIRTAL PIANO
+# VIRTAL PIANO 🎹
 ### Floating piano keys in the air.<BR>
 Bring your finger to the keys you want to play, click them and make your beautiful melodies<br>
 The project takes help of **Computer Vision** and **Media Pipe Library** <br>
-You can play any instrument and even make your own ***VIRTUAL ORCHESTRA***! :excited <br>
+You can play any instrument and even make your own ***VIRTUAL ORCHESTRA***! 🎼 <br>
 by using this simple template and making few changes in the code
 
 ## Music Files
